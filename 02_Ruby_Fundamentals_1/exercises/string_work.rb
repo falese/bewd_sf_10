@@ -2,13 +2,13 @@ puts "what up, whats your name"
 
 name = gets.chomp
 
-  puts "#{name} What it do. What you drinkin kid?"
+  puts "#{name.capitalize} What it do. What you drinkin kid?"
 
-greeting = "Ok #{name}, that all?"
+greeting = "Ok #{name.capitalize}, that all?"
 
 drink = gets.chomp
 
-goodbye = "Tight, #{name}, that'll be $#{drink.length} dollars"
+goodbye = "Tight, #{name.capitalize}, that'll be $#{drink.length} dollars"
 
 
 
@@ -19,9 +19,9 @@ goodbye = "Tight, #{name}, that'll be $#{drink.length} dollars"
       puts "time to chop it up and screw it,
         #{name.reverse}
         #{drink.reverse}
-        #{drink.length.to_s}
+        #{drink.length.to_s} #{drink} << s
         #{drink.strip}
-        #{drink.prepend("dope ")}"
+        #{drink.prepend("dope ").upcase}"
 
 
   end
