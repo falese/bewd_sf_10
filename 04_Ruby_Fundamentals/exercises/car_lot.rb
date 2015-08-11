@@ -8,6 +8,11 @@
 require 'pry'
 
 def show_all_cars(hashes)
+  hashes.each do |hash|
+    hash
+    puts "The model is #{hash[:model]} and the drive train is #{hash[:drivetrain]}"
+
+  end
 
 
 end
