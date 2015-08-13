@@ -29,9 +29,11 @@ h1 = {model: "s", drivetrain:"AWD", seats: "4", body_style:"sedan" ,is_electric:
 h2 = {model: "prius", drivetrain:"FWD", seats: "4", body_style: "econobox", is_electric: true}
 h3 = {model: "jeep", drivetrain:"4WD", seats: "5", body_stlye: "SUV", is_electric: false}
 h4 = {model: "corolla", drivetrain: "FWD", seats: "4", body_style:"econobox", is_electric: false}
-# hashes = []
-# hashes.push(h1,h2,h3,h4)
 
+binding.pry
+hashes = []
+hashes.push(h1,h2,h3,h4)
 
-hashes = add_cars(h1, h2, h3)
-show_all_cars(hashes)
+#
+# hashes = add_cars(h1, h2, h3)
+# show_all_cars(hashes)
