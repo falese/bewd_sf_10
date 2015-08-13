@@ -2,6 +2,7 @@ require 'pry'
 # require 'pry-byebug'
 
 def get_love_interest
+<<<<<<< HEAD
   puts "who do ya love?"
   var1 = gets.downcase.chomp
   capture_love_interest_response(var1)
@@ -24,6 +25,31 @@ def get_valid_answer(var2, var1)
     puts "Please try again 'yes' or 'no' answers only"
     capture_love_interest_response(var1)
   end
+=======
+  puts "Who do you love? \n"
+  love_interest = gets.strip
+  capture_love_interest_response(love_interest)
+end
+
+def capture_love_interest_response(love_interest)
+  puts "Do you think about #{love_interest} ? \n"
+  puts "Answer 'Yes' or 'No' \n"
+  user_answer = gets.strip.downcase
+  get_valid_answer(user_answer, love_interest)
+end
+
+def get_valid_answer(user_answer, love_interest)
+  case user_answer #needs a to the star
+    when "yes"
+      puts "Then call #{love_interest} now!!!"
+    when "no"
+      puts "Ok. Call soon. You love #{love_interest}"
+    else
+      puts "That's not a valid answer \n"
+      puts "Please answer 'Yes' or 'No' \n"
+      capture_love_interest_response(love_interest)
+    end
+>>>>>>> 3cf4c91277a89e0fb0af011baa82a3dbb150a9f5
 end
 
 ### This is where we call methods to run our script and output its result

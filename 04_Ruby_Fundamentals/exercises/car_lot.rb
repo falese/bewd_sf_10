@@ -7,6 +7,7 @@
 
 require 'pry'
 
+<<<<<<< HEAD
 def show_all_cars(hashes)
   hashes.each do |hash|
     hash
@@ -16,10 +17,18 @@ def show_all_cars(hashes)
 
 
 
+=======
+def show_all_cars(cars)
+  cars.each do |car|
+    puts "This is a #{car[:brand]}. The Model is #{car[:model]}"
+    puts "***** This car is great for earth ****" if car[:is_electric] == true
+  end
+>>>>>>> 3cf4c91277a89e0fb0af011baa82a3dbb150a9f5
 end
 
 #write a method that accepts an unlimited number of cars (or arguments)
 def add_cars(*all_cars)
+<<<<<<< HEAD
   hashes
 
 
@@ -37,3 +46,22 @@ hashes.push(h1,h2,h3,h4)
 #
 # hashes = add_cars(h1, h2, h3)
 # show_all_cars(hashes)
+=======
+  all_cars
+end
+
+tesla = {brand: "Tesla", model: "Model X", year: 2016, price: 85000, is_electric: true}
+ford = {brand: "Ford", model: "Escape", year: 2015, price: 17000, is_electric: false }
+porshe = {brand: "Porshe", model: "Speedter", year: 1955, price: 250000, is_electric: false }
+deloraen = {brand: "AMC", model: "Delorean", year: 1980, price: 50000, is_electric: false }
+toyota = {brand: "Toyota", model: "Prius", year: 2016, price: 49000, is_electric: true }
+
+#APPROACH - A
+# cars = []
+# cars.push(tesla, ford, porshe, deloraen, toyota)
+# show_all_cars(cars)
+
+#APPROACH - B
+cars = add_cars(tesla, ford, porshe, deloraen, toyota)
+show_all_cars(cars)
+>>>>>>> 3cf4c91277a89e0fb0af011baa82a3dbb150a9f5
