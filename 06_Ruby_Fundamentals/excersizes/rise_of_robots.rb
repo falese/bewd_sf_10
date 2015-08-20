@@ -18,22 +18,21 @@ class Robot
 
   #instance method
   def flying_skill
-    binding.pry
     "I am #{self.name}. I can fly! My serial number is #{self}"
   end
 
 
   #instance method
   def fighting_skill
-    puts "I am #{self.name}.  I come to destroy"
+    puts "I am #{self.name}.  I come to destroy" if model == "hunter"
   end
 
   def translation
-    puts "I am #{self.name}. I can speak 23 million languages"
+    puts "I am #{self.name}. I can speak 23 million languages" if model == "protocol"
   end
 
   def locomotion
-    puts "I am #{self.name}. I can fly into hyperspace"
+    puts "I am #{self.name}. I can fly into hyperspace" if model == "astromech"
   end
 
 
@@ -54,25 +53,33 @@ class Robot
    robots = number.to_i
    robots.times do
     robot = Robot.new(name = names.sample, model = models.sample, origin = origins.sample)
-    puts "Here is the robot #{name} he is a #{model} from the planet #{origin} and his serial number is #{robot}"
-    case robot
-    when model == "hunter"
-      Robot.fighting_skill
-    when model == "protocol"
-      Robot.translation
-    when model == "astromech"
-      Robot.flying_skill
-    end
+    puts "Here is the robot #{name}. \n He is a #{model} from the planet #{origin}. \n His serial number is #{robot}\n"
+    puts "#{robot.fighting_skill} #{robot.flying_skill} #{robot.translation}"
+
+
+    # case robot
+    # when @model == "hunter"
+    #   Robot.fighting_skill
+    # when @model == "protocol"
+    #   Robot.translation
+    # when @model == "astromech"
+    #   Robot.flying_skill
+    # end
   end
 end
 
 
 end
+
+puts "lets make some robots, how many do you want?"
 number = gets.chomp.to_i
-
+puts "great, do you want them to be randomized?"
+response = gets.chomp.downcase.to_s
+if response == "yes"
 Robot.randomizer(number)
-
-
+else
+Robot.make_robots(number)
+end
 
 #create a class
 #set attributes read and write capabilities
