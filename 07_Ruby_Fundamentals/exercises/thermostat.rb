@@ -34,14 +34,17 @@ attr_accessor :temp, :set
 
 private
 
-def turn_down(set)
-puts "turning down the heater to match the set point of #{set} "
+  def turn_down(set)
+    puts "turning down the heater to match the set point of #{set} "
+    @temp = @set
+    puts "Confirmed, the temperature has been set to match the requested temperature of #{temp}"
+  end
 
-end
-
-def turn_up(set)
-puts "turning up the heater to match the set point of #{set}"
-end
+  def turn_up(set)
+    puts "turning up the heater to match the set point of #{set}"
+    @temp = @set
+    puts "Confirmed, the temperature has been set to match the requested temperature of #{temp}"
+  end
 
 end
 all_temps = [40, 50, 60, 70, 80, 90]

@@ -46,6 +46,7 @@ class Robot
     end
   end
 
+#class method, this method creates instances of class
  def self.randomizer(number)
    names = ["IG-88","C-3PO","R2D2"]
    models = ["hunter","protocol","astromech"]
@@ -56,6 +57,8 @@ class Robot
     puts "Here is the robot #{name}. \n He is a #{model} from the planet #{origin}. \n His serial number is #{robot}\n"
     puts "#{robot.fighting_skill} #{robot.flying_skill} #{robot.translation}"
 
+    # why can't we use a case to go through these methods?
+    #
 
     # case robot
     # when @model == "hunter"
